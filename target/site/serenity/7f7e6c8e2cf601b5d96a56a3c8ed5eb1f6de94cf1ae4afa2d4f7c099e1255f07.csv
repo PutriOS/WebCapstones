@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Outpatient","Manage User","SUCCESS","2022-07-18T22:16:23.4342572+07:00[Asia/Jakarta]","0.0","111.09"
+"Outpatient","Search","SUCCESS","2022-07-18T22:18:15.240145+07:00[Asia/Jakarta]","0.0","13.46"
+"Outpatient","View Outpatient List","SUCCESS","2022-07-18T22:16:23.2397784+07:00[Asia/Jakarta]","0.0","33.85"
+"Outpatient","View Report OutPatient","SUCCESS","2022-07-18T22:16:58.1812033+07:00[Asia/Jakarta]","0.0","21.86"
+"Outpatient","Add Outpatient","SUCCESS","2022-07-18T22:17:24.1991171+07:00[Asia/Jakarta]","0.0","114.8"

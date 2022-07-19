@@ -1,0 +1,11 @@
+starter\stepdefinitions\ManageUserStepdefs.class
+starter\pages\Outpatient.class
+starter\CucumberTestSuite.class
+starter\pages\Login.class
+starter\stepdefinitions\HomeStepdefs.class
+starter\pages\ManageUser.class
+starter\stepdefinitions\ForgotPassStepdefs.class
+starter\stepdefinitions\LoginStepdefs.class
+starter\stepdefinitions\OutpatientStepdefs.class
+starter\pages\Home.class
+starter\pages\ForgotPassword.class

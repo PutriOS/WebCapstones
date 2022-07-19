@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Outpatient" skipped="0" tests="11" time="295.05" timestamp="2022-07-18 10:16:23"><testcase name="Manage User"/><testcase name="Search"/><testcase name="View Outpatient List"/><testcase name="View Report OutPatient"/><testcase name="Add Outpatient"/></testsuite>

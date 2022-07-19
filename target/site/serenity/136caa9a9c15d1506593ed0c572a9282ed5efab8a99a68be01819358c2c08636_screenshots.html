@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1ab3da3879cce9ff9304c7853868f13f0d02b8d5ae6c378c39e44f90291439bd.html">Outpatient</a></span>
+                > <span class="truncate-60"><a
+                    href="136caa9a9c15d1506593ed0c572a9282ed5efab8a99a68be01819358c2c08636.html">Manage User </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 18-07-2022 22:16</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Outpatient </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="3bbea21dde96bc7b9d00c19f86b353b8fa8009736be0ef8d1f5fb8209dec5d95.html">Manage Neg
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Manage User
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am on Manage user page<br>When I input "&lt;namaUser&gt;", "&lt;email&gt;", "&lt;jenisKelamin&gt;", "&lt;role&gt;", "&lt;fasilitas&gt;"<br>And I click update button<br>Then I am validating the "&lt;responses&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 1: Manage User ({namaUser=den, email=dennise124@holyhos.co.id, jenisKelamin=Female, role=role, fasilitas=fasilitas, responses=length invalid})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Manage user page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given i am on Home Page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Click tombol login" width="1920"/>
+                <img src="b390ae06d6ce336f98417034f0c57ff8245f9b7afc5e3e881ec043302f770717.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="b390ae06d6ce336f98417034f0c57ff8245f9b7afc5e3e881ec043302f770717.png" title=" Given i am on Home Page (completed)" width="1920"/>
+                <img src="b390ae06d6ce336f98417034f0c57ff8245f9b7afc5e3e881ec043302f770717.png" title=" Click menu manage user" width="1920"/>
+                <img src="d4a5179e1e6bc1d208359968b9fb9289b5f047c38591f590406d84d2db8af8b2.png" title=" Click menu manage user (completed)" width="1920"/>
+                <img src="d4a5179e1e6bc1d208359968b9fb9289b5f047c38591f590406d84d2db8af8b2.png" title=" Click sub menu manage user" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu manage user (completed)" width="1920"/>
+                <img src="6dbf73961d1d1e436d3e9a61ceff8f79fa381f5bb9dff77722248ebd897244b6.png" title=" Given I am on Manage user page (completed)" width="1920"/>
+                <img src="79d077d2648b5a59fc8f89e0ed0d816971374c9014cede64c4a4b520f0fcb46e.png" title=" When I input &quot;den&quot;, &quot;dennise124@holyhos.co.id&quot;, &quot;Female&quot;, &quot;role&quot;, &quot;fasilitas&quot;" width="1920"/>
+                <img src="79d077d2648b5a59fc8f89e0ed0d816971374c9014cede64c4a4b520f0fcb46e.png" title=" Click edit button" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Click edit button (completed)" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Input field name: den" width="1920"/>
+                <img src="4d2d3821b7bc9ad902f2b7481602d058840c4e6073c45cbad0b64750448ea77c.png" title=" Input field name: den (completed)" width="1920"/>
+                <img src="4d2d3821b7bc9ad902f2b7481602d058840c4e6073c45cbad0b64750448ea77c.png" title=" Input field email: dennise124@holyhos.co.id" width="1920"/>
+                <img src="1fb1bd81a921212990d5c15fd4cd5e60c13dcb9a741f4118532782bd871e72fe.png" title=" Input field email: dennise124@holyhos.co.id (completed)" width="1920"/>
+                <img src="1fb1bd81a921212990d5c15fd4cd5e60c13dcb9a741f4118532782bd871e72fe.png" title=" Input field gender: Female" width="1920"/>
+                <img src="620c2a12453135d0e09e2a3647abb4965c4eb8e4b03cbd637caf815938b59a14.png" title=" Input field gender: Female (completed)" width="1920"/>
+                <img src="620c2a12453135d0e09e2a3647abb4965c4eb8e4b03cbd637caf815938b59a14.png" title=" Select field role" width="1920"/>
+                <img src="ce85e65d57e062343382c4aed7368dc6a270730d8eaa95dcf20ba4d609c5fe54.png" title=" Select field role (completed)" width="1920"/>
+                <img src="ce85e65d57e062343382c4aed7368dc6a270730d8eaa95dcf20ba4d609c5fe54.png" title=" Select field facility" width="1920"/>
+                <img src="2d14d920d55cc8ff20c27f79441111b9e54ea9a609abc44791c8c3819bd32760.png" title=" Select field facility (completed)" width="1920"/>
+                <img src="2d14d920d55cc8ff20c27f79441111b9e54ea9a609abc44791c8c3819bd32760.png" title=" When I input &quot;den&quot;, &quot;dennise124@holyhos.co.id&quot;, &quot;Female&quot;, &quot;role&quot;, &quot;fasilitas&quot; (completed)" width="1920"/>
+                <img src="2d14d920d55cc8ff20c27f79441111b9e54ea9a609abc44791c8c3819bd32760.png" title=" And I click update button" width="1920"/>
+                <img src="2d14d920d55cc8ff20c27f79441111b9e54ea9a609abc44791c8c3819bd32760.png" title=" Click update button" width="1920"/>
+                <img src="acee26fd9d3ee9651470988daaf24d998ad4f362dd0d2be13e1b5404e258f71f.png" title=" Click update button (completed)" width="1920"/>
+                <img src="acee26fd9d3ee9651470988daaf24d998ad4f362dd0d2be13e1b5404e258f71f.png" title=" And I click update button (completed)" width="1920"/>
+                <img src="acee26fd9d3ee9651470988daaf24d998ad4f362dd0d2be13e1b5404e258f71f.png" title=" Then I am validating the &quot;length invalid&quot;" width="1920"/>
+                <img src="87d72b76b100537710dbe22612c7e5e01af2da82ce0b3ff723e1d33bcb7fcf36.png" title=" Validate error length name" width="1920"/>
+                <img src="635b150af2ed8a3c324ae3a2a66fa03672fb1b7d0885b8f3918b8d34f2db8f66.png" title=" Validate error length name (completed)" width="1920"/>
+                <img src="635b150af2ed8a3c324ae3a2a66fa03672fb1b7d0885b8f3918b8d34f2db8f66.png" title=" Then I am validating the &quot;length invalid&quot; (completed)" width="1920"/>
+                <img src="635b150af2ed8a3c324ae3a2a66fa03672fb1b7d0885b8f3918b8d34f2db8f66.png" title=" 1: Manage User ({namaUser=den, email=dennise124@holyhos.co.id, jenisKelamin=Female, role=role, fasilitas=fasilitas, responses=length invalid}) (completed)" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 2: Manage User ({namaUser=dennise, email=, jenisKelamin=Female, role=role, fasilitas=fasilitas, responses=email null})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Manage user page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given i am on Home Page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="603a27f55cc8ce27bb55d9aa201eb247665ae21e736345bf3606a3ee29fbd41f.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="603a27f55cc8ce27bb55d9aa201eb247665ae21e736345bf3606a3ee29fbd41f.png" title=" Click tombol login" width="1920"/>
+                <img src="6d5d1bb515494e325414057a72313a1bee9eeb7859a67abaee093a120691831b.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="6d5d1bb515494e325414057a72313a1bee9eeb7859a67abaee093a120691831b.png" title=" Given i am on Home Page (completed)" width="1920"/>
+                <img src="6d5d1bb515494e325414057a72313a1bee9eeb7859a67abaee093a120691831b.png" title=" Click menu manage user" width="1920"/>
+                <img src="e0b1cd9cdd873d653f32d5bd6e427db486e36ece64dae26529a875b957486ec1.png" title=" Click menu manage user (completed)" width="1920"/>
+                <img src="e0b1cd9cdd873d653f32d5bd6e427db486e36ece64dae26529a875b957486ec1.png" title=" Click sub menu manage user" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu manage user (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Given I am on Manage user page (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" When I input &quot;dennise&quot;, &quot;&quot;, &quot;Female&quot;, &quot;role&quot;, &quot;fasilitas&quot;" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click edit button" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Click edit button (completed)" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Input field name: dennise" width="1920"/>
+                <img src="9ca7eae275784424ac0b1f1d624fc9e1f540e5e49a757943689404dc00bed35c.png" title=" Input field name: dennise (completed)" width="1920"/>
+                <img src="9ca7eae275784424ac0b1f1d624fc9e1f540e5e49a757943689404dc00bed35c.png" title=" Input field email: " width="1920"/>
+                <img src="84843887b2e5001668830b20929cf20741d93c223dba219fad32427176e5f806.png" title=" Input field email:  (completed)" width="1920"/>
+                <img src="84843887b2e5001668830b20929cf20741d93c223dba219fad32427176e5f806.png" title=" Input field gender: Female" width="1920"/>
+                <img src="268e328c8156a573e3bde0b2251949aa2fac1e057900e81641b43f633dbb30e6.png" title=" Input field gender: Female (completed)" width="1920"/>
+                <img src="268e328c8156a573e3bde0b2251949aa2fac1e057900e81641b43f633dbb30e6.png" title=" Select field role" width="1920"/>
+                <img src="b39ec5f14877fc4e113772c6473913a20091dda45bd4f8fe7031496f510848f3.png" title=" Select field role (completed)" width="1920"/>
+                <img src="b39ec5f14877fc4e113772c6473913a20091dda45bd4f8fe7031496f510848f3.png" title=" Select field facility" width="1920"/>
+                <img src="32f11bfa3cf5039dd6aa892943e46628ea94aa031fd98786d527fc19baec5985.png" title=" Select field facility (completed)" width="1920"/>
+                <img src="32f11bfa3cf5039dd6aa892943e46628ea94aa031fd98786d527fc19baec5985.png" title=" When I input &quot;dennise&quot;, &quot;&quot;, &quot;Female&quot;, &quot;role&quot;, &quot;fasilitas&quot; (completed)" width="1920"/>
+                <img src="32f11bfa3cf5039dd6aa892943e46628ea94aa031fd98786d527fc19baec5985.png" title=" And I click update button" width="1920"/>
+                <img src="32f11bfa3cf5039dd6aa892943e46628ea94aa031fd98786d527fc19baec5985.png" title=" Click update button" width="1920"/>
+                <img src="3b3f58aebb731cfaa848f40697023cab8548218f0257d7848249c7f5f6b38b34.png" title=" Click update button (completed)" width="1920"/>
+                <img src="3b3f58aebb731cfaa848f40697023cab8548218f0257d7848249c7f5f6b38b34.png" title=" And I click update button (completed)" width="1920"/>
+                <img src="3b3f58aebb731cfaa848f40697023cab8548218f0257d7848249c7f5f6b38b34.png" title=" Then I am validating the &quot;email null&quot;" width="1920"/>
+                <img src="c7b1e14033246a867adcbf2692b5a6862280723f3fc0fa4f707326161d8ccbfd.png" title=" Validate error blank" width="1920"/>
+                <img src="d5d54ea565383815e91ede5a83a3de37c73f95c7318ff087d7adbcea77a0bc56.png" title=" Validate error blank (completed)" width="1920"/>
+                <img src="d5d54ea565383815e91ede5a83a3de37c73f95c7318ff087d7adbcea77a0bc56.png" title=" Then I am validating the &quot;email null&quot; (completed)" width="1920"/>
+                <img src="d5d54ea565383815e91ede5a83a3de37c73f95c7318ff087d7adbcea77a0bc56.png" title=" 2: Manage User ({namaUser=dennise, email=, jenisKelamin=Female, role=role, fasilitas=fasilitas, responses=email null}) (completed)" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 3: Manage User ({namaUser=dennise, email=dennise124@holyhos.co.id, jenisKelamin=, role=role, fasilitas=fasilitas, responses=gender null})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Manage user page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given i am on Home Page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Click tombol login" width="1920"/>
+                <img src="532041a9af1f1d25cc2f69666e638e82069deeb0d89bc315604e578a518b277c.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="532041a9af1f1d25cc2f69666e638e82069deeb0d89bc315604e578a518b277c.png" title=" Given i am on Home Page (completed)" width="1920"/>
+                <img src="532041a9af1f1d25cc2f69666e638e82069deeb0d89bc315604e578a518b277c.png" title=" Click menu manage user" width="1920"/>
+                <img src="e0b1cd9cdd873d653f32d5bd6e427db486e36ece64dae26529a875b957486ec1.png" title=" Click menu manage user (completed)" width="1920"/>
+                <img src="e0b1cd9cdd873d653f32d5bd6e427db486e36ece64dae26529a875b957486ec1.png" title=" Click sub menu manage user" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu manage user (completed)" width="1920"/>
+                <img src="6dbf73961d1d1e436d3e9a61ceff8f79fa381f5bb9dff77722248ebd897244b6.png" title=" Given I am on Manage user page (completed)" width="1920"/>
+                <img src="6dbf73961d1d1e436d3e9a61ceff8f79fa381f5bb9dff77722248ebd897244b6.png" title=" When I input &quot;dennise&quot;, &quot;dennise124@holyhos.co.id&quot;, &quot;&quot;, &quot;role&quot;, &quot;fasilitas&quot;" width="1920"/>
+                <img src="6dbf73961d1d1e436d3e9a61ceff8f79fa381f5bb9dff77722248ebd897244b6.png" title=" Click edit button" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Click edit button (completed)" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Input field name: dennise" width="1920"/>
+                <img src="63ef6ad7669753b3ae8712686b4e132a4c5e687abc665f387b84789d4c58031c.png" title=" Input field name: dennise (completed)" width="1920"/>
+                <img src="63ef6ad7669753b3ae8712686b4e132a4c5e687abc665f387b84789d4c58031c.png" title=" Input field email: dennise124@holyhos.co.id" width="1920"/>
+                <img src="bde98a6c52ee0ae2f0f535dc85a59285c28945f2cb1a93525edc4c79f94a4418.png" title=" Input field email: dennise124@holyhos.co.id (completed)" width="1920"/>
+                <img src="bde98a6c52ee0ae2f0f535dc85a59285c28945f2cb1a93525edc4c79f94a4418.png" title=" Input field gender: " width="1920"/>
+                <img src="a79a2b02ab17c71dfa46c1cafe7e2e8193f4b86060f0d3381aa199cd47cbedf8.png" title=" Input field gender:  (completed)" width="1920"/>
+                <img src="a79a2b02ab17c71dfa46c1cafe7e2e8193f4b86060f0d3381aa199cd47cbedf8.png" title=" Select field role" width="1920"/>
+                <img src="a35b80fed9c1596c3268fd367ce8f536a6f15788df2d7dc69f66044c9afa7874.png" title=" Select field role (completed)" width="1920"/>
+                <img src="a35b80fed9c1596c3268fd367ce8f536a6f15788df2d7dc69f66044c9afa7874.png" title=" Select field facility" width="1920"/>
+                <img src="2f48cc9aee437700a9c0915c5a0da673ccc8a90f7ac960f3560750460146ddac.png" title=" Select field facility (completed)" width="1920"/>
+                <img src="2f48cc9aee437700a9c0915c5a0da673ccc8a90f7ac960f3560750460146ddac.png" title=" When I input &quot;dennise&quot;, &quot;dennise124@holyhos.co.id&quot;, &quot;&quot;, &quot;role&quot;, &quot;fasilitas&quot; (completed)" width="1920"/>
+                <img src="2f48cc9aee437700a9c0915c5a0da673ccc8a90f7ac960f3560750460146ddac.png" title=" And I click update button" width="1920"/>
+                <img src="2f48cc9aee437700a9c0915c5a0da673ccc8a90f7ac960f3560750460146ddac.png" title=" Click update button" width="1920"/>
+                <img src="3ed9a69100b5c5b0425217bfc9300c5119e59c7532a34b0d06898beece5125be.png" title=" Click update button (completed)" width="1920"/>
+                <img src="3ed9a69100b5c5b0425217bfc9300c5119e59c7532a34b0d06898beece5125be.png" title=" And I click update button (completed)" width="1920"/>
+                <img src="3ed9a69100b5c5b0425217bfc9300c5119e59c7532a34b0d06898beece5125be.png" title=" Then I am validating the &quot;gender null&quot;" width="1920"/>
+                <img src="75fd89b9dc9c6768fb800216bc8dc5fd9442cbf02c03094c94af4fcf3bc6b603.png" title=" Validate error blank" width="1920"/>
+                <img src="ce9ca7f6fca82a7fa2c8c9d02a73df24a4720d6033d5ae4401d90335c21b9430.png" title=" Validate error blank (completed)" width="1920"/>
+                <img src="ce9ca7f6fca82a7fa2c8c9d02a73df24a4720d6033d5ae4401d90335c21b9430.png" title=" Then I am validating the &quot;gender null&quot; (completed)" width="1920"/>
+                <img src="ce9ca7f6fca82a7fa2c8c9d02a73df24a4720d6033d5ae4401d90335c21b9430.png" title=" 3: Manage User ({namaUser=dennise, email=dennise124@holyhos.co.id, jenisKelamin=, role=role, fasilitas=fasilitas, responses=gender null}) (completed)" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Manage user page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given i am on Home Page" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Click tombol login" width="1920"/>
+                <img src="96fa90d8988670349455d9596c7e0085e92a2561dfb32bd61c7c749829dc6f5a.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="96fa90d8988670349455d9596c7e0085e92a2561dfb32bd61c7c749829dc6f5a.png" title=" Given i am on Home Page (completed)" width="1920"/>
+                <img src="96fa90d8988670349455d9596c7e0085e92a2561dfb32bd61c7c749829dc6f5a.png" title=" Click menu manage user" width="1920"/>
+                <img src="e0b1cd9cdd873d653f32d5bd6e427db486e36ece64dae26529a875b957486ec1.png" title=" Click menu manage user (completed)" width="1920"/>
+                <img src="e0b1cd9cdd873d653f32d5bd6e427db486e36ece64dae26529a875b957486ec1.png" title=" Click sub menu manage user" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu manage user (completed)" width="1920"/>
+                <img src="6dbf73961d1d1e436d3e9a61ceff8f79fa381f5bb9dff77722248ebd897244b6.png" title=" Given I am on Manage user page (completed)" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" When I update user data" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Click edit button1" width="1920"/>
+                <img src="da20065babafeefb0c37b2e06867acadc7916385ec1d84c082d6dcc9434ebb65.png" title=" Input field name: beahan.com" width="1920"/>
+                <img src="c9b70d0606ac311f5b9e3afd8ffafa4a7182c6220a6f38efcfa75170a73d3689.png" title=" Input field name: beahan.com (completed)" width="1920"/>
+                <img src="c9b70d0606ac311f5b9e3afd8ffafa4a7182c6220a6f38efcfa75170a73d3689.png" title=" Input field email: boyle.name@holyhos.co.id" width="1920"/>
+                <img src="d47bf7938cc41ed4708fd16e5f9f9b21797812e6e58221e765cef37b95700ef0.png" title=" Input field email: boyle.name@holyhos.co.id (completed)" width="1920"/>
+                <img src="d47bf7938cc41ed4708fd16e5f9f9b21797812e6e58221e765cef37b95700ef0.png" title=" Input field genderr" width="1920"/>
+                <img src="67357ac833425349041fe18bfd9cb26408d4336b1103019892e93e469ba41a5f.png" title=" Input field genderr (completed)" width="1920"/>
+                <img src="67357ac833425349041fe18bfd9cb26408d4336b1103019892e93e469ba41a5f.png" title=" Select field role" width="1920"/>
+                <img src="e5a3fb6702112043b9dca17052c4e3808036b8a547cf7a107ef1d6c097ecb561.png" title=" Select field role (completed)" width="1920"/>
+                <img src="e5a3fb6702112043b9dca17052c4e3808036b8a547cf7a107ef1d6c097ecb561.png" title=" Select field facility" width="1920"/>
+                <img src="879fe8b0bfafcec43c576f79f652afbb256c170f3414a316b46b1d36f1e76d33.png" title=" Select field facility (completed)" width="1920"/>
+                <img src="879fe8b0bfafcec43c576f79f652afbb256c170f3414a316b46b1d36f1e76d33.png" title=" Click update button" width="1920"/>
+                <img src="527be47552d37deef05966a929564cb53e56ee6aa2ce45512ec9a6231b6ea8e0.png" title=" Click update button (completed)" width="1920"/>
+                <img src="527be47552d37deef05966a929564cb53e56ee6aa2ce45512ec9a6231b6ea8e0.png" title=" When I update user data (completed)" width="1920"/>
+                <img src="e48fb34cf0e4a084c30adc21d6b7b75f0e9f4ec20bc3f2d12c11b28495f300a7.png" title=" And I click update button" width="1920"/>
+                <img src="e48fb34cf0e4a084c30adc21d6b7b75f0e9f4ec20bc3f2d12c11b28495f300a7.png" title=" Click update button" width="1920"/>
+                <img src="e48fb34cf0e4a084c30adc21d6b7b75f0e9f4ec20bc3f2d12c11b28495f300a7.png" title=" Click update button (completed)" width="1920"/>
+                <img src="e48fb34cf0e4a084c30adc21d6b7b75f0e9f4ec20bc3f2d12c11b28495f300a7.png" title=" And I click update button (completed)" width="1920"/>
+                <img src="e48fb34cf0e4a084c30adc21d6b7b75f0e9f4ec20bc3f2d12c11b28495f300a7.png" title=" Then I am validating the element" width="1920"/>
+                <img src="e48fb34cf0e4a084c30adc21d6b7b75f0e9f4ec20bc3f2d12c11b28495f300a7.png" title=" Validate user" width="1920"/>
+                <img src="e48fb34cf0e4a084c30adc21d6b7b75f0e9f4ec20bc3f2d12c11b28495f300a7.png" title=" Then I am validating the element (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.6.0</span>
+</div>
+</body>
+</html>

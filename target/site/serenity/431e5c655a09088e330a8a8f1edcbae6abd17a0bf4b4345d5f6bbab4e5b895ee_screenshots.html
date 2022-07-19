@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1ab3da3879cce9ff9304c7853868f13f0d02b8d5ae6c378c39e44f90291439bd.html">Outpatient</a></span>
+                > <span class="truncate-60"><a
+                    href="431e5c655a09088e330a8a8f1edcbae6abd17a0bf4b4345d5f6bbab4e5b895ee.html">Add Outpatient </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 18-07-2022 22:17</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Outpatient </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="f5fd300042006f15781e8fc925badc98a5dabb184ed09b71a9fa0ca431231afd.html">Add
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Add Outpatient
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am on Add Menu Outpatient<br>When I input "&lt;kodePasien&gt;", "&lt;namaPasien&gt;", "&lt;tanggalKontrol&gt;", "&lt;keluhan&gt;", "&lt;jenisPoli&gt;", "&lt;jadwalSesi&gt;", "&lt;namaDokter&gt;", "&lt;nomorAntrian&gt;"<br>And I click submit button<br>Then I am validate "&lt;respond&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 1: Add Outpatient ({kodePasien=, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=sesi, namaDokter=dokter, nomorAntrian=1, respond=null})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Add Menu Outpatient" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Click tombol login" width="1920"/>
+                <img src="692e3645c3e58f029a3468ba392f190676abdcf30667106ca9df112c28ed15cc.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="692e3645c3e58f029a3468ba392f190676abdcf30667106ca9df112c28ed15cc.png" title=" Click menu outpatient" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click menu outpatient (completed)" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click sub menu add out patient" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu add out patient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Given I am on Add Menu Outpatient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" When I input &quot;&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;sesi&quot;, &quot;dokter&quot;, &quot;1&quot;" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Input field kode pasien: " width="1920"/>
+                <img src="4199f7f93c5cdf8f0c10a5b934628f563df6f18274313a48a63cc6d073fe6bc5.png" title=" Input field kode pasien:  (completed)" width="1920"/>
+                <img src="4199f7f93c5cdf8f0c10a5b934628f563df6f18274313a48a63cc6d073fe6bc5.png" title=" Input field nama pasien: hana" width="1920"/>
+                <img src="252263c6f5c9b21d5f5c57c3eda9e9ac256a05cfad2ee489d13354ba2dcc294f.png" title=" Input field nama pasien: hana (completed)" width="1920"/>
+                <img src="252263c6f5c9b21d5f5c57c3eda9e9ac256a05cfad2ee489d13354ba2dcc294f.png" title=" Input field tanggal kontrol" width="1920"/>
+                <img src="6efd83f5be3c83ff0a60965f7684d0f9288555165a5837d4aca68d37d4d6a7a7.png" title=" Input field tanggal kontrol (completed)" width="1920"/>
+                <img src="6efd83f5be3c83ff0a60965f7684d0f9288555165a5837d4aca68d37d4d6a7a7.png" title=" Input field keluhan: sakit maag" width="1920"/>
+                <img src="d86f163f7458db9cea76e7ac2f9cfd77a645d29d9e7c299c0471d60aa861a881.png" title=" Input field keluhan: sakit maag (completed)" width="1920"/>
+                <img src="d86f163f7458db9cea76e7ac2f9cfd77a645d29d9e7c299c0471d60aa861a881.png" title=" Input field poli" width="1920"/>
+                <img src="2c7f2bb7ec0b8483ff32ced3c3418b14950fc8b2542a51f6a2732119125a1788.png" title=" Input field poli (completed)" width="1920"/>
+                <img src="2c7f2bb7ec0b8483ff32ced3c3418b14950fc8b2542a51f6a2732119125a1788.png" title=" Input field sesi" width="1920"/>
+                <img src="e3cf87066536c1b3da2fe78b671ce7a53a2c3fa86ef7e0bf7bc402615d21eb32.png" title=" Input field sesi (completed)" width="1920"/>
+                <img src="e3cf87066536c1b3da2fe78b671ce7a53a2c3fa86ef7e0bf7bc402615d21eb32.png" title=" Input field dokter" width="1920"/>
+                <img src="9cd0f14b5e447daf518255fea30635fc2797ddc0717900d476898f72ffa30bc9.png" title=" Input field dokter (completed)" width="1920"/>
+                <img src="9cd0f14b5e447daf518255fea30635fc2797ddc0717900d476898f72ffa30bc9.png" title=" Input fieldnomor antrian: 1" width="1920"/>
+                <img src="0a8b49039bf3cb2c8d70ed12b792d4206b74c61577d3e659982313d8fc45b70f.png" title=" Input fieldnomor antrian: 1 (completed)" width="1920"/>
+                <img src="0a8b49039bf3cb2c8d70ed12b792d4206b74c61577d3e659982313d8fc45b70f.png" title=" When I input &quot;&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;sesi&quot;, &quot;dokter&quot;, &quot;1&quot; (completed)" width="1920"/>
+                <img src="0a8b49039bf3cb2c8d70ed12b792d4206b74c61577d3e659982313d8fc45b70f.png" title=" And I click submit button" width="1920"/>
+                <img src="0a8b49039bf3cb2c8d70ed12b792d4206b74c61577d3e659982313d8fc45b70f.png" title=" Click submit button" width="1920"/>
+                <img src="cbedcc4069841c98e43c74fd611949185ccd3c95389838503e295fa783d863b0.png" title=" Click submit button (completed)" width="1920"/>
+                <img src="cbedcc4069841c98e43c74fd611949185ccd3c95389838503e295fa783d863b0.png" title=" And I click submit button (completed)" width="1920"/>
+                <img src="cbedcc4069841c98e43c74fd611949185ccd3c95389838503e295fa783d863b0.png" title=" Then I am validate &quot;null&quot;" width="1920"/>
+                <img src="726e07ddd75c34b97b0328c7961f33b7f189aeda029ec0fd0541b71c8338d764.png" title=" Validate field blank" width="1920"/>
+                <img src="726e07ddd75c34b97b0328c7961f33b7f189aeda029ec0fd0541b71c8338d764.png" title=" Validate field blank (completed)" width="1920"/>
+                <img src="726e07ddd75c34b97b0328c7961f33b7f189aeda029ec0fd0541b71c8338d764.png" title=" Then I am validate &quot;null&quot; (completed)" width="1920"/>
+                <img src="726e07ddd75c34b97b0328c7961f33b7f189aeda029ec0fd0541b71c8338d764.png" title=" 1: Add Outpatient ({kodePasien=, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=sesi, namaDokter=dokter, nomorAntrian=1, respond=null}) (completed)" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 2: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=sesi, namaDokter=dokter, nomorAntrian=1, respond=null})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Add Menu Outpatient" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="02c7bdded5b5d3fd12cf2b2fab67fcc5e85b99e0bb61686a61e1415c8cb22e2d.png" title=" Click tombol login" width="1920"/>
+                <img src="eb1a668e7b82b2f881807164ee057d6c74a7985d3450585980c41dcda4d3d423.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="eb1a668e7b82b2f881807164ee057d6c74a7985d3450585980c41dcda4d3d423.png" title=" Click menu outpatient" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click menu outpatient (completed)" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click sub menu add out patient" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu add out patient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Given I am on Add Menu Outpatient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;sesi&quot;, &quot;dokter&quot;, &quot;1&quot;" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Input field kode pasien: RM00026" width="1920"/>
+                <img src="55ef3617e66c1e82911bb5706ed3b9ec4f58b54937b297080db38dfe9d1f4647.png" title=" Input field kode pasien: RM00026 (completed)" width="1920"/>
+                <img src="55ef3617e66c1e82911bb5706ed3b9ec4f58b54937b297080db38dfe9d1f4647.png" title=" Input field nama pasien: hana" width="1920"/>
+                <img src="0ac23475009390f71aaa6610d5aa0d2ee9ebb34c379ff4fac0ffaa301249801d.png" title=" Input field nama pasien: hana (completed)" width="1920"/>
+                <img src="0ac23475009390f71aaa6610d5aa0d2ee9ebb34c379ff4fac0ffaa301249801d.png" title=" Input field keluhan: sakit maag" width="1920"/>
+                <img src="9336eff05592d68fdd9841f35b80795fae4d03ab5fcd7f76b708ba125a7327ff.png" title=" Input field keluhan: sakit maag (completed)" width="1920"/>
+                <img src="9336eff05592d68fdd9841f35b80795fae4d03ab5fcd7f76b708ba125a7327ff.png" title=" Input field poli" width="1920"/>
+                <img src="5bdf4e6d4951d865b116229e32fbbce50b73d497413f1905f0be740af1837e68.png" title=" Input field poli (completed)" width="1920"/>
+                <img src="5bdf4e6d4951d865b116229e32fbbce50b73d497413f1905f0be740af1837e68.png" title=" Input field sesi" width="1920"/>
+                <img src="b118028ea5d6cb6badee307cc117d3b4eed2c700cbae9110befffcc2bcad5981.png" title=" Input field sesi (completed)" width="1920"/>
+                <img src="b118028ea5d6cb6badee307cc117d3b4eed2c700cbae9110befffcc2bcad5981.png" title=" Input field dokter" width="1920"/>
+                <img src="ea8376b9af20c3dbbf88dd2eebdc91fbfca76fd76f5b96bfe4567a3b2b411ea3.png" title=" Input field dokter (completed)" width="1920"/>
+                <img src="ea8376b9af20c3dbbf88dd2eebdc91fbfca76fd76f5b96bfe4567a3b2b411ea3.png" title=" Input fieldnomor antrian: 1" width="1920"/>
+                <img src="5848267215ee01ee943541cf9d90860681279cd37737d4aa263f6c40f6b10bf0.png" title=" Input fieldnomor antrian: 1 (completed)" width="1920"/>
+                <img src="5848267215ee01ee943541cf9d90860681279cd37737d4aa263f6c40f6b10bf0.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;sesi&quot;, &quot;dokter&quot;, &quot;1&quot; (completed)" width="1920"/>
+                <img src="5848267215ee01ee943541cf9d90860681279cd37737d4aa263f6c40f6b10bf0.png" title=" And I click submit button" width="1920"/>
+                <img src="5848267215ee01ee943541cf9d90860681279cd37737d4aa263f6c40f6b10bf0.png" title=" Click submit button" width="1920"/>
+                <img src="e4ecda8174bf4a3511be4f9e35b7604446b798d2091515332cd09a79d59a1907.png" title=" Click submit button (completed)" width="1920"/>
+                <img src="e4ecda8174bf4a3511be4f9e35b7604446b798d2091515332cd09a79d59a1907.png" title=" And I click submit button (completed)" width="1920"/>
+                <img src="e4ecda8174bf4a3511be4f9e35b7604446b798d2091515332cd09a79d59a1907.png" title=" Then I am validate &quot;null&quot;" width="1920"/>
+                <img src="97ee3411b064e18d9b7e312cd2508490316bec17d920fa331658689c9ff87270.png" title=" Validate field blank" width="1920"/>
+                <img src="97ee3411b064e18d9b7e312cd2508490316bec17d920fa331658689c9ff87270.png" title=" Validate field blank (completed)" width="1920"/>
+                <img src="97ee3411b064e18d9b7e312cd2508490316bec17d920fa331658689c9ff87270.png" title=" Then I am validate &quot;null&quot; (completed)" width="1920"/>
+                <img src="97ee3411b064e18d9b7e312cd2508490316bec17d920fa331658689c9ff87270.png" title=" 2: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=sesi, namaDokter=dokter, nomorAntrian=1, respond=null}) (completed)" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 3: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=, jadwalSesi=sesi, namaDokter=dokter, nomorAntrian=1, respond=null})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Add Menu Outpatient" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="588b6e222a5a3dad20b5ef544211459be4a165a68c2b8e1954adc108632e8ed3.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="588b6e222a5a3dad20b5ef544211459be4a165a68c2b8e1954adc108632e8ed3.png" title=" Click tombol login" width="1920"/>
+                <img src="a7273d149bf0277deafec5f48e5f3ceb19104b6ff6c330e6aa03ed0ad4944770.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="a7273d149bf0277deafec5f48e5f3ceb19104b6ff6c330e6aa03ed0ad4944770.png" title=" Click menu outpatient" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click menu outpatient (completed)" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click sub menu add out patient" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu add out patient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Given I am on Add Menu Outpatient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;&quot;, &quot;sesi&quot;, &quot;dokter&quot;, &quot;1&quot;" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Input field kode pasien: RM00026" width="1920"/>
+                <img src="55ef3617e66c1e82911bb5706ed3b9ec4f58b54937b297080db38dfe9d1f4647.png" title=" Input field kode pasien: RM00026 (completed)" width="1920"/>
+                <img src="55ef3617e66c1e82911bb5706ed3b9ec4f58b54937b297080db38dfe9d1f4647.png" title=" Input field nama pasien: hana" width="1920"/>
+                <img src="e8a24f87bee6d3d1d8af5f183b80094c3a3ed6330f18d2a081ac4ad8cf7c57e4.png" title=" Input field nama pasien: hana (completed)" width="1920"/>
+                <img src="e8a24f87bee6d3d1d8af5f183b80094c3a3ed6330f18d2a081ac4ad8cf7c57e4.png" title=" Input field tanggal kontrol" width="1920"/>
+                <img src="ecca60dd6f92f9138784b11bb1e55b681ac4cb97649d7bfefafe0633097e6e04.png" title=" Input field tanggal kontrol (completed)" width="1920"/>
+                <img src="ecca60dd6f92f9138784b11bb1e55b681ac4cb97649d7bfefafe0633097e6e04.png" title=" Input field keluhan: sakit maag" width="1920"/>
+                <img src="0fb87d12e452c9430fa4277a3c30e9c579da7dc33fc56f9571d55c318f37b639.png" title=" Input field keluhan: sakit maag (completed)" width="1920"/>
+                <img src="0fb87d12e452c9430fa4277a3c30e9c579da7dc33fc56f9571d55c318f37b639.png" title=" Input field sesi" width="1920"/>
+                <img src="972313e5888b2e69399df0247f1b7ad43aa15da3c10ca37a790ee7e07be6bfe0.png" title=" Input field sesi (completed)" width="1920"/>
+                <img src="972313e5888b2e69399df0247f1b7ad43aa15da3c10ca37a790ee7e07be6bfe0.png" title=" Input field dokter" width="1920"/>
+                <img src="22b6b1159900b7c49df984b5ef29b5c324a167d09e653b741dd834003f32fdf4.png" title=" Input field dokter (completed)" width="1920"/>
+                <img src="22b6b1159900b7c49df984b5ef29b5c324a167d09e653b741dd834003f32fdf4.png" title=" Input fieldnomor antrian: 1" width="1920"/>
+                <img src="76aea21aa23c7167fc08409898a7f6a2bf246ae0f6f7afe9efacc03094ff6c4a.png" title=" Input fieldnomor antrian: 1 (completed)" width="1920"/>
+                <img src="76aea21aa23c7167fc08409898a7f6a2bf246ae0f6f7afe9efacc03094ff6c4a.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;&quot;, &quot;sesi&quot;, &quot;dokter&quot;, &quot;1&quot; (completed)" width="1920"/>
+                <img src="76aea21aa23c7167fc08409898a7f6a2bf246ae0f6f7afe9efacc03094ff6c4a.png" title=" And I click submit button" width="1920"/>
+                <img src="76aea21aa23c7167fc08409898a7f6a2bf246ae0f6f7afe9efacc03094ff6c4a.png" title=" Click submit button" width="1920"/>
+                <img src="818e1532c8523e4536de86b1645cb005d9123c1140c2c0815309d48c0e8de169.png" title=" Click submit button (completed)" width="1920"/>
+                <img src="818e1532c8523e4536de86b1645cb005d9123c1140c2c0815309d48c0e8de169.png" title=" And I click submit button (completed)" width="1920"/>
+                <img src="818e1532c8523e4536de86b1645cb005d9123c1140c2c0815309d48c0e8de169.png" title=" Then I am validate &quot;null&quot;" width="1920"/>
+                <img src="1e9f81a9eb05dffb69555efb6a527cf192de48eb988fe5dbcf0f084b9a9898a6.png" title=" Validate field blank" width="1920"/>
+                <img src="1e9f81a9eb05dffb69555efb6a527cf192de48eb988fe5dbcf0f084b9a9898a6.png" title=" Validate field blank (completed)" width="1920"/>
+                <img src="1e9f81a9eb05dffb69555efb6a527cf192de48eb988fe5dbcf0f084b9a9898a6.png" title=" Then I am validate &quot;null&quot; (completed)" width="1920"/>
+                <img src="1e9f81a9eb05dffb69555efb6a527cf192de48eb988fe5dbcf0f084b9a9898a6.png" title=" 3: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=, jadwalSesi=sesi, namaDokter=dokter, nomorAntrian=1, respond=null}) (completed)" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 4: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=, namaDokter=dokter, nomorAntrian=1, respond=null})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Add Menu Outpatient" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="0b75819603654ee60ef2a38781cc5e8755bc5f9c425568af9d717e03c5a6ef46.png" title=" Input password: password" width="1920"/>
+                <img src="5f0ce15c286ed35659a0785cf7259ebabec6542af30f1faaeb7fd5ca1c2b8546.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="5f0ce15c286ed35659a0785cf7259ebabec6542af30f1faaeb7fd5ca1c2b8546.png" title=" Click tombol login" width="1920"/>
+                <img src="6108d838a5a52775d45227891a9bfacdab03f48218a2979abbf7d24a84b01461.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="6108d838a5a52775d45227891a9bfacdab03f48218a2979abbf7d24a84b01461.png" title=" Click menu outpatient" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click menu outpatient (completed)" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click sub menu add out patient" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu add out patient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Given I am on Add Menu Outpatient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;&quot;, &quot;dokter&quot;, &quot;1&quot;" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Input field kode pasien: RM00026" width="1920"/>
+                <img src="b907770f51b96e8da748947cf3716cf75165c08af5f55a670205444a0097c98e.png" title=" Input field kode pasien: RM00026 (completed)" width="1920"/>
+                <img src="b907770f51b96e8da748947cf3716cf75165c08af5f55a670205444a0097c98e.png" title=" Input field nama pasien: hana" width="1920"/>
+                <img src="8370c935e4273f3a1de5b93386d96c82e6bddbdac7f910467fa14cd157d72813.png" title=" Input field nama pasien: hana (completed)" width="1920"/>
+                <img src="8370c935e4273f3a1de5b93386d96c82e6bddbdac7f910467fa14cd157d72813.png" title=" Input field tanggal kontrol" width="1920"/>
+                <img src="ff3d1fe9f35264ab4ef9572fb8f71da4deec3a00a4287bff23eb89e4c15233d1.png" title=" Input field tanggal kontrol (completed)" width="1920"/>
+                <img src="ff3d1fe9f35264ab4ef9572fb8f71da4deec3a00a4287bff23eb89e4c15233d1.png" title=" Input field keluhan: sakit maag" width="1920"/>
+                <img src="39f7ef794e40b02f27df4ae44cee7abbcef808a4dd4471c25ac453ca91649df5.png" title=" Input field keluhan: sakit maag (completed)" width="1920"/>
+                <img src="39f7ef794e40b02f27df4ae44cee7abbcef808a4dd4471c25ac453ca91649df5.png" title=" Input field poli" width="1920"/>
+                <img src="8cbecb0eb4ca68941753582bd2ca60616af576642e702a8bc8c73b0aae9c50e8.png" title=" Input field poli (completed)" width="1920"/>
+                <img src="8cbecb0eb4ca68941753582bd2ca60616af576642e702a8bc8c73b0aae9c50e8.png" title=" Input field dokter" width="1920"/>
+                <img src="1a4b38ccd4d1916bfd1cdc159e3bd8d4144dfcc6255c73a0fccf95b2b735f23d.png" title=" Input field dokter (completed)" width="1920"/>
+                <img src="1a4b38ccd4d1916bfd1cdc159e3bd8d4144dfcc6255c73a0fccf95b2b735f23d.png" title=" Input fieldnomor antrian: 1" width="1920"/>
+                <img src="f0f90adeb73a62c9d98eeb8c659076691714b71b591112e389c10d6ec1ed5f88.png" title=" Input fieldnomor antrian: 1 (completed)" width="1920"/>
+                <img src="f0f90adeb73a62c9d98eeb8c659076691714b71b591112e389c10d6ec1ed5f88.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;&quot;, &quot;dokter&quot;, &quot;1&quot; (completed)" width="1920"/>
+                <img src="f0f90adeb73a62c9d98eeb8c659076691714b71b591112e389c10d6ec1ed5f88.png" title=" And I click submit button" width="1920"/>
+                <img src="f0f90adeb73a62c9d98eeb8c659076691714b71b591112e389c10d6ec1ed5f88.png" title=" Click submit button" width="1920"/>
+                <img src="b0fac04363a380b148b03d3630cf6a9c583a9a3a889d488bb4abc545cef0980c.png" title=" Click submit button (completed)" width="1920"/>
+                <img src="b0fac04363a380b148b03d3630cf6a9c583a9a3a889d488bb4abc545cef0980c.png" title=" And I click submit button (completed)" width="1920"/>
+                <img src="b0fac04363a380b148b03d3630cf6a9c583a9a3a889d488bb4abc545cef0980c.png" title=" Then I am validate &quot;null&quot;" width="1920"/>
+                <img src="14fe2cd8759306d020f2cf8748be8f4e5c06c7b8bfebdcc417de4d2f07dee19e.png" title=" Validate field blank" width="1920"/>
+                <img src="14fe2cd8759306d020f2cf8748be8f4e5c06c7b8bfebdcc417de4d2f07dee19e.png" title=" Validate field blank (completed)" width="1920"/>
+                <img src="14fe2cd8759306d020f2cf8748be8f4e5c06c7b8bfebdcc417de4d2f07dee19e.png" title=" Then I am validate &quot;null&quot; (completed)" width="1920"/>
+                <img src="14fe2cd8759306d020f2cf8748be8f4e5c06c7b8bfebdcc417de4d2f07dee19e.png" title=" 4: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=, namaDokter=dokter, nomorAntrian=1, respond=null}) (completed)" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" 5: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=sesi, namaDokter=, nomorAntrian=1, respond=null})" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Given I am on Add Menu Outpatient" width="1920"/>
+                <img src="f178e892b059d1a7e0363ee11c817f137a36b5b0f100c99ed9fbdd1d9389e1f4.png" title=" Button login" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Button login (completed)" width="1920"/>
+                <img src="c9afa9b0e95a54ed6f562e22b9546bb2d478e6f860f4973a06e72153e25d2619.png" title=" Input email: rimurutempest@holyhos.co.id" width="1920"/>
+                <img src="acdbbb6f2b82b0ccaf7e1b81503e9244591f5350dba6579b9d277058fe78feb5.png" title=" Input email: rimurutempest@holyhos.co.id (completed)" width="1920"/>
+                <img src="acdbbb6f2b82b0ccaf7e1b81503e9244591f5350dba6579b9d277058fe78feb5.png" title=" Input password: password" width="1920"/>
+                <img src="09cbed39168419b97022c28c629821cf5f229c7b4d33943bc3f000c9e5fac55f.png" title=" Input password: password (completed)" width="1920"/>
+                <img src="09cbed39168419b97022c28c629821cf5f229c7b4d33943bc3f000c9e5fac55f.png" title=" Click tombol login" width="1920"/>
+                <img src="ef0ed777847c8a1892702d12a06018e33c8995b01a2c90c95bf3de98eb11ec97.png" title=" Click tombol login (completed)" width="1920"/>
+                <img src="ef0ed777847c8a1892702d12a06018e33c8995b01a2c90c95bf3de98eb11ec97.png" title=" Click menu outpatient" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click menu outpatient (completed)" width="1920"/>
+                <img src="0aabb7e636d6f9f329c54443ebb00958b0242f4e2d1d5085c9416cfa0dd10137.png" title=" Click sub menu add out patient" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Click sub menu add out patient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Given I am on Add Menu Outpatient (completed)" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;sesi&quot;, &quot;&quot;, &quot;1&quot;" width="1920"/>
+                <img src="aef01e10bef36255fbfd96d5c2927a30c404516c1df6e36dee0685165fce61ad.png" title=" Input field kode pasien: RM00026" width="1920"/>
+                <img src="0d09ac6f6c19bdc518da8a26c7d06dce8a7fdc5e9fc689495c8915c948686ef3.png" title=" Input field kode pasien: RM00026 (completed)" width="1920"/>
+                <img src="0d09ac6f6c19bdc518da8a26c7d06dce8a7fdc5e9fc689495c8915c948686ef3.png" title=" Input field nama pasien: hana" width="1920"/>
+                <img src="2cb1c946840a91e7140f9ea9430dd1451d254d95fc07e32bf44605a89ee0a1e8.png" title=" Input field nama pasien: hana (completed)" width="1920"/>
+                <img src="2cb1c946840a91e7140f9ea9430dd1451d254d95fc07e32bf44605a89ee0a1e8.png" title=" Input field tanggal kontrol" width="1920"/>
+                <img src="12c410b72e90ba1a675cf85876a064239e0066c42e7c8669eadd8e8be470b027.png" title=" Input field tanggal kontrol (completed)" width="1920"/>
+                <img src="12c410b72e90ba1a675cf85876a064239e0066c42e7c8669eadd8e8be470b027.png" title=" Input field keluhan: sakit maag" width="1920"/>
+                <img src="e421f70699f18e78f373c2ea7cea0ed844f4fb3cda3210739a8c225c4a870275.png" title=" Input field keluhan: sakit maag (completed)" width="1920"/>
+                <img src="e421f70699f18e78f373c2ea7cea0ed844f4fb3cda3210739a8c225c4a870275.png" title=" Input field poli" width="1920"/>
+                <img src="18b4093e9e7ab3eef76dab7fcd0aa2f1748ed44bff7c6aa329bbf5e535514e95.png" title=" Input field poli (completed)" width="1920"/>
+                <img src="18b4093e9e7ab3eef76dab7fcd0aa2f1748ed44bff7c6aa329bbf5e535514e95.png" title=" Input field sesi" width="1920"/>
+                <img src="d6a503501762928584a035cbb978a5bd232e95ec52e237b7b96db20bdcc53af1.png" title=" Input field sesi (completed)" width="1920"/>
+                <img src="d6a503501762928584a035cbb978a5bd232e95ec52e237b7b96db20bdcc53af1.png" title=" Input fieldnomor antrian: 1" width="1920"/>
+                <img src="92d78f27e2f1788b35e61c6c9651e92fd1cbeaed0315c099d24a46f0bcb69239.png" title=" Input fieldnomor antrian: 1 (completed)" width="1920"/>
+                <img src="92d78f27e2f1788b35e61c6c9651e92fd1cbeaed0315c099d24a46f0bcb69239.png" title=" When I input &quot;RM00026&quot;, &quot;hana&quot;, &quot;tanggal&quot;, &quot;sakit maag&quot;, &quot;poli&quot;, &quot;sesi&quot;, &quot;&quot;, &quot;1&quot; (completed)" width="1920"/>
+                <img src="92d78f27e2f1788b35e61c6c9651e92fd1cbeaed0315c099d24a46f0bcb69239.png" title=" And I click submit button" width="1920"/>
+                <img src="92d78f27e2f1788b35e61c6c9651e92fd1cbeaed0315c099d24a46f0bcb69239.png" title=" Click submit button" width="1920"/>
+                <img src="eabe9c058a3a0f5ee483fb2da0244301799c83d13ba9dfec4488dc074dba5103.png" title=" Click submit button (completed)" width="1920"/>
+                <img src="eabe9c058a3a0f5ee483fb2da0244301799c83d13ba9dfec4488dc074dba5103.png" title=" And I click submit button (completed)" width="1920"/>
+                <img src="eabe9c058a3a0f5ee483fb2da0244301799c83d13ba9dfec4488dc074dba5103.png" title=" Then I am validate &quot;null&quot;" width="1920"/>
+                <img src="4a8d041717c2d150a297843fbf1e3d226dee815ada3626233162bf9a6a2a97bb.png" title=" Validate field blank" width="1920"/>
+                <img src="4a8d041717c2d150a297843fbf1e3d226dee815ada3626233162bf9a6a2a97bb.png" title=" Validate field blank (completed)" width="1920"/>
+                <img src="4a8d041717c2d150a297843fbf1e3d226dee815ada3626233162bf9a6a2a97bb.png" title=" Then I am validate &quot;null&quot; (completed)" width="1920"/>
+                <img src="4a8d041717c2d150a297843fbf1e3d226dee815ada3626233162bf9a6a2a97bb.png" title=" 5: Add Outpatient ({kodePasien=RM00026, namaPasien=hana, tanggalKontrol=tanggal, keluhan=sakit maag, jenisPoli=poli, jadwalSesi=sesi, namaDokter=, nomorAntrian=1, respond=null}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.6.0</span>
+</div>
+</body>
+</html>
